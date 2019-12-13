@@ -1,0 +1,31 @@
+BEGIN
+	REPEAT
+		GET size of square from user
+		SET count to 1
+		SET rowTotal to 0
+		SET colTotal to 0
+		SET diagonalTotal to 0
+		COMPUTE size EQUALS square*square
+		SET matrix of length EQUALS size 
+		REPEAT
+			GET value from user
+			Enter Value to matrix
+			INCREMENT count
+		UNTIL count EQUALS size
+		DISPLAY matrix
+		COMPUTE rowTotal
+		COMPUTE colTotal
+		COMPUTE diagonalTotal
+		IF rowTotal EQUALS diagonalTotal AND colTotal
+			DISPLAY "its a magic square"
+		ELSE
+			DISPLAY "not a magic square"
+		
+		IF (value NOT REPEAT > 1) AND (all values <=9 AND values>=0)
+			DISPLAY "its a lo-shu"
+		ELSE
+			DISPLAY "not a lo-shu"
+		PROMPT user to re-run program
+		GET userChoice
+	UNTIL userChoice == "n"
+END
